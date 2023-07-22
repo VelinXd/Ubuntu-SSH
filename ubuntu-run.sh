@@ -1,3 +1,5 @@
+gh=${{env.GH_NAME}}
+echo $gh
 git clone https://${{env.GH_NAME}}:${{env.GH_PASS}}@github.com/HeyYoWhatBro/kernel_xiaomi_mt6768 -b Atomic-A11 kernel
 cd kernel
 echo "
