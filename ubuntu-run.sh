@@ -14,7 +14,7 @@ TELEGRAM_TOKEN="6220436357:AAFbgs0EwIckxGCLC-QuVoYz8Cdh9jTCXP0"
 ClangName="azure"
 
 # Kernel variant / type !!! Don't forget to change after changing clang name !!!
-KERNEL_VARIANT="slmk"
+KERNEL_VARIANT="Azure"
 
 # KernelSU (Options are: yes and no)
 KERNELSU="no"
