@@ -1,4 +1,4 @@
-git clone https://github.com/HeyYoWhatBro/kernel_xiaomi_mt6768 -b Atomic-A11 kernel
+git clone https://github.com/HeyYoWhatBro/kernel_xiaomi_mt6768 -b Atomic-A13 kernel
 cd kernel
 echo "
 # Telegram Chat ID to send build info
