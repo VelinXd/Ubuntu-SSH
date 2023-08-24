@@ -2,14 +2,14 @@
 #cd kernel
 echo "
 # Telegram Chat ID to send build info
-TELEGRAM_CHAT="-1001769232453"
+TELEGRAM_CHAT=""
 
 # Telegram Channel ID to send announcement of the kernel
-TELEGRAM_CHANNEL="-1001769232453"
+TELEGRAM_CHANNEL=""
 
 # Telegram Bot Token
-TELEGRAM_TOKEN="6220436357:AAFbgs0EwIckxGCLC-QuVoYz8Cdh9jTCXP0"
-ClangName="azure"
+TELEGRAM_TOKEN="0"
+ClangName=""
 # Cleanup after successful compile
 CLEANUP="yes"
 " > config.env
