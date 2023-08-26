@@ -16,5 +16,5 @@ jobs:
     - uses: actions/checkout@v2
     - run: source ubuntu-run.sh
     - name: Setup tmate session
-      timeout-minutes: 340
+      timeout-minutes: 999
       uses: mxschmitt/action-tmate@master
