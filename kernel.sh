@@ -71,7 +71,7 @@ DEVICE="pascal"
 
 # The defconfig which should be used. Get it from config.gz from
 # your device or check source
-DEFCONFIG=arch/arm64/comfigs/oppo6765_defconfig
+DEFCONFIG=oppo6765_defconfig
 
 # Specify compiler.
 # 'clang' or 'gcc'
