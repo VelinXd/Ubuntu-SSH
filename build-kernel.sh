@@ -26,10 +26,10 @@ curl --upload-file out/arch/arm64/boot/Image.gz-dtb https://transfer.sh/Image.gz
 # KSU
 if [[ $KSU == "1" ]]; then
 curl -LSs "https://raw.githubusercontent.com/tiann/KernelSU/main/kernel/setup.sh" | bash -
-        echo "CONFIG_KPROBES=y" >> arch/${ARCH}/configs/${DEFCONFIG}
-        echo "CONFIG_HAVE_KPROBES=y" >> arch/${ARCH}/configs/${DEFCONFIG}
-        echo "CONFIG_KPROBE_EVENTS=y" >> arch/${ARCH}/configs/${DEFCONFIG}
-        echo "CONFIG_OVERLAY_FS=y" >> arch/${ARCH}/configs/${DEFCONFIG}
+        echo "CONFIG_KPROBES=y" >> arch/${ARCH}/configs/oppo6765_defconfig
+        echo "CONFIG_HAVE_KPROBES=y" >> arch/${ARCH}/configs/oppo6765_defconfig
+        echo "CONFIG_KPROBE_EVENTS=y" >> arch/${ARCH}/configs/oppo6765_defconfig
+        echo "CONFIG_OVERLAY_FS=y" >> arch/${ARCH}/configs/oppo6765_defconfig
 fi
 if [[ $KSU == "0" ]]; then
 build
