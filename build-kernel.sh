@@ -2,7 +2,6 @@
 # NON KSU
 # SCRIPT BY ERASELK           
 KSU="1"        
-ARCH="arm64"
 
 clone() {
 sudo apt-get update -y && sudo apt-get upgrade -y ; sudo apt-get install python2 -y
@@ -17,7 +16,7 @@ touch build.sh
 echo "export KBUILD_BUILD_USER="eraselk"
 export LOCALVERSION="codespace"
 export PATH="${PWD}/clang/bin:$PATH"
-make -j$(nproc --all) O=out arch=${ARCH} oppo6765_defconfig
+make -j$(nproc --all) O=out arch=arm64 arch/arm64/configs/oppo6765_defconfig
 make -j$(nproc --all) arch=${ARCH} O=out \
 CROSS_COMPILE=aarch64-linux-gnu- \
 CC="clang" \
