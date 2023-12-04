@@ -18,8 +18,8 @@ touch build.sh
 echo "export KBUILD_BUILD_USER="eraselk"
 export LOCALVERSION="codespace"
 export PATH="${PWD}/clang/bin:$PATH"
-make -j$(nproc --all) O=out ${ARCH} ${DEFCONFIG}
-make -j$(nproc --all) ${ARCH} O=out \
+make -j$(nproc --all) O=out arch=${ARCH} ${DEFCONFIG}
+make -j$(nproc --all) arch=${ARCH} O=out \
 CROSS_COMPILE=aarch64-linux-gnu- \
 CC="clang" \
 CROSS_COMPILE_ARM32=arm-linux-gnueabi-
