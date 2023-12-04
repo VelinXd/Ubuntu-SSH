@@ -1,7 +1,7 @@
 #! /usr/bin/bash
 # NON KSU
 # SCRIPT BY ERASELK   
-DEFCONFIG="oppo6765_defconfig"         
+DEFCONFIG=oppo6765_defconfig        
 KSU="1"        
 ARCH="arm64"
 
