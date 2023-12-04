@@ -16,7 +16,7 @@ sleep 5s
 git clone --depth=1 https://github.com/picasso09/clang-9.0.3-r353983c1 clang
 touch build.sh 
 echo "export KBUILD_BUILD_USER="eraselk"
-export LOCALVERSION="codespace
+export LOCALVERSION="codespace"
 export PATH="${PWD}/clang/bin:$PATH"
 make -j$(nproc --all) O=out ${ARCH} ${DEFCONFIG}
 make -j$(nproc --all) ${ARCH} O=out \
