@@ -71,11 +71,11 @@ DEVICE="pascal"
 
 # The defconfig which should be used. Get it from config.gz from
 # your device or check source
-DEFCONFIG=oppo6765_defconfig
+DEFCONFIG=arch/arm64/comfigs/oppo6765_defconfig
 
 # Specify compiler.
 # 'clang' or 'gcc'
-COMPILER=gcc
+COMPILER=clang
 
 # Build modules. 0 = NO | 1 = YES
 MODULES=0
@@ -107,7 +107,7 @@ FILES=Image.gz
 BUILD_DTBO=0
 
 # PATCH KERNELSU
-KSU=0
+KSU=1
 if [ $KSU = 1 ]
 then
 curl -LSs "https://raw.githubusercontent.com/tiann/KernelSU/main/kernel/setup.sh" | bash -
@@ -139,7 +139,7 @@ VERBOSE=0
 
 # Debug purpose. Send logs on every successfull builds
 # 1 is YES | 0 is NO(default)
-LOG_DEBUG=0
+LOG_DEBUG=1
 
 ##------------------------------------------------------##
 ##---------Do Not Touch Anything Beyond This------------##
