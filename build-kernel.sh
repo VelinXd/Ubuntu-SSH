@@ -1,25 +1,14 @@
 #! /usr/bin/bash
 # NON KSU
-# SCRIPT BY ERASELK
-KERNEL_SOURCE=https://github.com/eraselk/realme_C11_C12_C15_kernel   
-DEFCONFIG=oppo6765_defconfig         
-KSU=1        
-ARCH=arm64
+# SCRIPT BY ERASELK   
+DEFCONFIG="oppo6765_defconfig"         
+KSU="1"        
+ARCH="arm64"
 
-# cleaning
-clean() {
-if [[ -d "out" ]]; then
-rm -rf out
-sudo make clean
-clone
-else
-clone
-fi
-}
 clone() {
 sudo apt-get update -y && sudo apt-get upgrade -y ; sudo apt-get install python2 -y
 sleep 5s
-git clone --depth=1 ${KERNEL_SOURCE} kernel
+git clone --depth=1 https://github.com/eraselk/realme_C11_C12_C15_kernel kernel
 cd kernel
 sleep 5s
 
@@ -50,5 +39,5 @@ fi
 build() {#
 find . -type f -exec chmod 777 {} + ; bash build.sh
 }
-clean
+clone
 build
