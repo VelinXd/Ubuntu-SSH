@@ -107,7 +107,7 @@ FILES=Image.gz
 BUILD_DTBO=0
 
 # PATCH KERNELSU
-KSU=1
+KSU=0
 if [ $KSU = 1 ]
 then
 curl -LSs "https://raw.githubusercontent.com/tiann/KernelSU/main/kernel/setup.sh" | bash -
