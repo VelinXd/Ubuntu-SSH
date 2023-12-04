@@ -4,13 +4,11 @@
 KSU="1"        
 
 clone() {
-sudo apt-get update -y && sudo apt-get upgrade -y ; sudo apt-get install python2 -y
+sudo apt install gcc -y ; sudo apt-get install python2 -y
 sleep 5s
 git clone --depth=1 https://github.com/eraselk/realme_C11_C12_C15_kernel kernel
 cd kernel
 sleep 5s
-#git clone --depth=1 https://github.com/Sukrut4778/gcc-linaro-7.4.1 gcc64
-#git clone --depth=1 https://github.com/Sukrut4778/gcc-linaro-7.4.1-32 gcc32
 touch build.sh 
 echo "export KBUILD_BUILD_USER="eraselk"
 export LOCALVERSION="codespace"
