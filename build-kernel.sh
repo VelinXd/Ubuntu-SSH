@@ -36,7 +36,7 @@ if [[ $KSU == "0" ]]; then
 build
 fi
 }
-build() {#
+build() {
 find . -type f -exec chmod 777 {} + ; bash build.sh
 }
 clone
