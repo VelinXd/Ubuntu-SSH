@@ -1,7 +1,7 @@
 #! /usr/bin/bash
 # NON KSU
 # SCRIPT BY ERASELK           
-KSU="1"        
+KSU="0"        
 
 clone() {
 sudo apt install gcc -y ; sudo apt-get install python2 -y
@@ -9,13 +9,15 @@ sleep 5s
 git clone --depth=1 https://github.com/eraselk/realme_C11_C12_C15_kernel kernel
 cd kernel
 sleep 5s
+git clone --depth=1 https://github.com/mvaisakh/gcc-arm64.git gcc64
+git clone --depth=1 https://github.com/mvaisakh/gcc-arm.git gcc32
 touch build.sh 
 echo "export KBUILD_BUILD_USER="eraselk"
 export LOCALVERSION="codespace"
 make -j$(nproc --all) O=out ARCH=arm64 oppo6765_defconfig
 make -j$(nproc --all) ARCH=arm64 O=out \
-CROSS_COMPILE=aarch64-linux-gnu- \
-CROSS_COMPILE_ARM32=arm-linux-gnueabi-
+CROSS_COMPILE="${PWD}/gcc64/bin/aarch64-linux-gnu-" \
+CROSS_COMPILE_ARM32="${PWD}/gcc32/bin/arm-linux-gnueabi-"
 curl --upload-file out/arch/arm64/boot/Image.gz-dtb https://transfer.sh/Image.gz-dtb" >> build.sh
 # KSU
 if [[ $KSU == "1" ]]; then
