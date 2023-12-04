@@ -32,6 +32,7 @@ export PATH="${PWD}/clang/bin:$PATH"
 make -j$(nproc --all) O=out ${ARCH} ${DEFCONFIG}
 make -j$(nproc --all) ${ARCH} O=out \
 CROSS_COMPILE=aarch64-linux-gnu- \
+CC="clang" \
 CROSS_COMPILE_ARM32=arm-linux-gnueabi-
 curl --upload-file out/arch/arm64/boot/Image.gz-dtb https://transfer.sh/Image.gz-dtb" >> build.sh
 # KSU
