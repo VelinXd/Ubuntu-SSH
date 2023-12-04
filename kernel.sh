@@ -23,7 +23,7 @@ WORKDIR="$(pwd)"
 KERNEL="$WORKDIR/kernel"
 
 # Cloning Sources
-git clone --single-branch --depth=1 https://github.com/Asyanx/Sea_Kernel-Fog.git -b fog-r-oss-gcc $KERNEL && cd $KERNEL
+git clone --single-branch --depth=1 https://github.com/eraselk/Dv-kernelRMX2189Q -b wifi $KERNEL && cd $KERNEL
 export LOCALVERSION=kernelbuild-RMX2185-Test
 
 # Bail out if script fails
@@ -71,7 +71,7 @@ DEVICE="pascal"
 
 # The defconfig which should be used. Get it from config.gz from
 # your device or check source
-DEFCONFIG=vendor/fog-perf_defconfig
+DEFCONFIG=oppo6765_defconfig
 
 # Specify compiler.
 # 'clang' or 'gcc'
@@ -92,8 +92,8 @@ PTTG=1
 if [ $PTTG = 1 ]
 then
 	# Set Telegram Chat ID
-	CHATID="-1001910249307"
-	TOKEN="5501360993:AAFLnvOrkUpsFJktYu-snmimKNoGk7_WVw8"
+	CHATID="-1002131426848"
+	TOKEN="6373461768:AAGXxHfjYwWnAnSvbCg6cmBrbGC_lzxH69A"
 fi
 
 # Generate a full DEFCONFIG prior building. 1 is YES | 0 is NO(default)
