@@ -1,7 +1,6 @@
 #! /usr/bin/bash
 # NON KSU
-# SCRIPT BY ERASELK   
-DEFCONFIG=oppo6765_defconfig        
+# SCRIPT BY ERASELK           
 KSU="1"        
 ARCH="arm64"
 
@@ -18,7 +17,7 @@ touch build.sh
 echo "export KBUILD_BUILD_USER="eraselk"
 export LOCALVERSION="codespace"
 export PATH="${PWD}/clang/bin:$PATH"
-make -j$(nproc --all) O=out arch=${ARCH} ${DEFCONFIG}
+make -j$(nproc --all) O=out arch=${ARCH} oppo6765_defconfig
 make -j$(nproc --all) arch=${ARCH} O=out \
 CROSS_COMPILE=aarch64-linux-gnu- \
 CC="clang" \
