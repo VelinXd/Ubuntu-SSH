@@ -1,4 +1,6 @@
 #! /usr/bin/bash
+sudo apt-get update -y && sudo apt-get upgrade -y ; sudo apt-get install python2 -y
+sleep 5s
 git clone --depth=1 https://github.com/eraselk/realme_C11_C12_C15_kernel kernel
 cd kernel
 git clone --depth=1 https://github.com/EternalX-project/aarch64-linux-gnu gcc64 ; git clone --depth=1 https://github.com/EternalX-project/arm-linux-gnueabi.git gcc32
