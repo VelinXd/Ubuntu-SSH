@@ -24,7 +24,7 @@ KERNEL="$WORKDIR/kernel"
 
 # Cloning Sources
 git clone --single-branch --depth=1 https://github.com/Asyanx/Sea_Kernel-Fog.git -b fog-r-oss-gcc $KERNEL && cd $KERNEL
-export LOCALVERSION=3.5/Aero🐙✨
+export LOCALVERSION=kernelbuild-RMX2185-Test
 
 # Bail out if script fails
 set -e
@@ -54,20 +54,20 @@ KERNEL_DIR="$(pwd)"
 BASEDIR="$(basename "$KERNEL_DIR")"
 
 # The name of the Kernel, to name the ZIP
-ZIPNAME="sea-Aero-T3-NONSLMK-KSU"
+ZIPNAME="kerneltest-RMX2185"
 
 # Build Author
 # Take care, it should be a universal and most probably, case-sensitive
-AUTHOR="Asyanx"
+AUTHOR="eraselk20"
 
 # Architecture
 ARCH=arm64
 
 # The name of the device for which the kernel is built
-MODEL="Redmi 10C"
+MODEL="Realme C11,C12,C15"
 
 # The codename of the device
-DEVICE="fog"
+DEVICE="pascal"
 
 # The defconfig which should be used. Get it from config.gz from
 # your device or check source
@@ -107,7 +107,7 @@ FILES=Image.gz
 BUILD_DTBO=0
 
 # PATCH KERNELSU
-KSU=1
+KSU=0
 if [ $KSU = 1 ]
 then
 curl -LSs "https://raw.githubusercontent.com/tiann/KernelSU/main/kernel/setup.sh" | bash -
@@ -161,7 +161,7 @@ KERVER=$(make kernelversion)
 COMMIT_HEAD=$(git log --oneline -1)
 
 # Set Date
-DATE=$(TZ=Asia/Jakarta date +"%Y%m%d-%T")
+DATE=$(TZ=Asia/Makassar date +"%Y%m%d-%T")
 
 #Now Its time for other stuffs like cloning, exporting, etc
 
