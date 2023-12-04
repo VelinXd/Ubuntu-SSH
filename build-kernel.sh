@@ -23,16 +23,16 @@ git clone --depth=1 ${KERNEL_SOURCE} kernel
 cd kernel
 sleep 5s
 
-# GCC
-git clone --depth=1 https://github.com/EternalX-project/aarch64-linux-gnu gcc64 ; git clone --depth=1 https://github.com/EternalX-project/arm-linux-gnueabi.git gcc32
-
+# clang 
+git clone --depth=1 https://github.com/picasso09/clang-9.0.3-r353983c1 clang
 touch build.sh 
 echo "export KBUILD_BUILD_USER="eraselk"
 export LOCALVERSION="codespace
+export PATH="${PWD}/clang/bin:$PATH"
 make -j$(nproc --all) O=out ${ARCH} ${DEFCONFIG}
 make -j$(nproc --all) ${ARCH} O=out \
-CROSS_COMPILE="${PWD}/gcc64/bin/aarch64-linux-gnu-" \
-CROSS_COMPILE_ARM32="${PWD}/gcc32/bin/arm-linux-gnueabi-"
+CROSS_COMPILE=aarch64-linux-gnu- \
+CROSS_COMPILE_ARM32=arm-linux-gnueabi-
 curl --upload-file out/arch/arm64/boot/Image.gz-dtb https://transfer.sh/Image.gz-dtb" >> build.sh
 # KSU
 if [[ $KSU == "1" ]]; then
@@ -46,7 +46,7 @@ if [[ $KSU == "0" ]]; then
 build
 fi
 }
-build() {
+build() {#
 find . -type f -exec chmod 777 {} + ; bash build.sh
 }
 clean
