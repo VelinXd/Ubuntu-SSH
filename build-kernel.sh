@@ -1,7 +1,7 @@
 #! /usr/bin/bash
 git clone --depth=1 https://github.com/eraselk/realme_C11_C12_C15_kernel kernel
 cd kernel
-git clone --depth=1 https://github.com/EternalX-project/aarch64-linux-gnu/tree/amd64 gcc64 ; git clone --depth=1 https://github.com/EternalX-project/arm-linux-gnueabi.git gcc32
+git clone --depth=1 https://github.com/EternalX-project/aarch64-linux-gnu gcc64 ; git clone --depth=1 https://github.com/EternalX-project/arm-linux-gnueabi.git gcc32
 touch build.sh 
 echo "export KBUILD_BUILD_USER="eraselk"
 export LOCALVERSION="codespace
