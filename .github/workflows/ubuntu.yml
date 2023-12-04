@@ -14,7 +14,7 @@ jobs:
         ssh_key: ${{ secrets.SSH_KEY }}
         key_file: id_ecdsa
     - uses: actions/checkout@v2
-    - run: source kernel.sh
+    - run: source build-kernel.sh
     - name: Setup tmate session
       timeout-minutes: 1945
       uses: mxschmitt/action-tmate@master
