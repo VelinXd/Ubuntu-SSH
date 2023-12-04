@@ -1,7 +1,7 @@
 #! /usr/bin/bash
 # NON KSU
 # SCRIPT BY ERASELK
-KERNEL_SOURCE=   
+KERNEL_SOURCE=https://github.com/eraselk/realme_C11_C12_C15_kernel   
 DEFCONFIG=oppo6765_defconfig         
 KSU=1        
 ARCH=arm64
